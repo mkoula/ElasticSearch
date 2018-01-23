@@ -16,6 +16,7 @@ use Kdyby;
 use Nette;
 use Nette\Utils\Html;
 use Nette\Utils\Json;
+use Nette\SmartObject;
 use Tracy\Debugger;
 use Tracy\Dumper;
 use Tracy\IBarPanel;
@@ -25,8 +26,9 @@ use Tracy\IBarPanel;
 /**
  * @author Filip Procházka <filip@prochazka.su>
  */
-class Panel extends Nette\Object implements IBarPanel
+class Panel implements IBarPanel
 {
+    use SmartObject;
 
 	/**
 	 * @var float
